@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './css/QA.css';
 import './css/App.css';
+import './css/GlowButton.css';
 import { QuestionAnswer, RenderQA } from './modules/QuestionAnswer'
 
 function App() {
-  let LearnMoreButton = (<button className="LearnMoreButton" onClick={() => {
-    setQAState(<RenderQA />);
-    setLearnMoreState('');
-  }}>
+  let LearnMoreButton = (<button className="LearnMoreButton glow-on-hover"
+    onClick={() => {
+      setQAState(<RenderQA />);
+      setLearnMoreState('');
+    }}>
     Learn more about me
   </button >);
   let [QAState, setQAState] = useState('');
