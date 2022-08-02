@@ -3,20 +3,18 @@ import '../css/Accordion.scss';
 
 class QuestionAnswer {
   question = [
-    'What is my education background?',
+    'Education and Background',
     'What kind of roles am I looking for?',
-    'Where are I located?',
-    'How many years of experience do you have?',
-    'Where do you currently work?',
-    'Where have you worked previously?'
+    'Contact Info',
+    'Lorem Ipsum?',
+    'Lorem Ipsum?'
   ];
   answer = [
-    'B.S in Computer Science from University at Buffalo ',
+    'Originally from Brooklyn, NY. Currently a software engineer at Yext, previously at Capital One and Amazon. I studied Computer Science at SUNY Buffalo',
     'Full-Stack Software Engineer',
-    'Brooklyn',
-    'I started my first job in 2019',
-    'Yext',
-    'Amazon, Capital One'
+    'levyshi56@gmail.com',
+    'lorem lorem',
+    'lorem lorem'
   ];
 
 
@@ -50,16 +48,12 @@ function RenderQA() {
     let buttonRef = useRef(null);
     let elem = (
       <div className="QA-container" key={i}>
-        <button ref={buttonRef} className="QA-question" onClick={() => {
-          displayAnswer((
-            <p className="QA-answer">
-              {qAndA.answer[i]}
-            </p>
-          ))
-        }}>
+        <h3 className="QA-question">
           {qAndA.question[i]}
-        </button>
-        {answerState}
+        </h3>
+        <div className="QA-answer">
+          {qAndA.answer[i]}
+        </div>
       </div >);
     buttonRefList.push(buttonRef);
     QArray.push(elem)

@@ -1,0 +1,22 @@
+main {
+  text-align: center;
+  width: 100%;
+}
+
+h1, h2
+{
+  font-family: 'Bebas Neue', cursive;
+}
+
+.JobTitle
+{
+
+  &-container
+  {
+    width: max-content;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10%;
+  }
+}
+
